@@ -15,8 +15,7 @@ from .market import Market
 from .market_album import MarketAlbum
 from .sticker import Sticker
 from .pretty_cards import PrettyCards
-from .audio_msg import AudioMsg
-
+from .event import Event
 import typing
 
 
@@ -42,25 +41,26 @@ class Attachments(str, Enum):
     market_album = MarketAlbum
     sticker = Sticker
     pretty_cards = PrettyCards
+    event = Event
 
 
 class Attachment(BaseModel):
-    type: str = None
-    photo: Photo = None
-    posted_photo: PostedPhoto = None
-    video: Video = None
-    audio: Audio = None
-    document: Document = None
-    graffiti: Graffiti = None
-    link: Link = None
-    note: Note = None
-    app: App = None
-    poll: Poll = None
-    page: Page = None
-    album: Album = None
+    type: str
+    photo: Photo
+    posted_photo: PostedPhoto
+    video: Video
+    audio: Audio
+    document: Document
+    graffiti: Graffiti
+    link: Link
+    note: Note
+    app: App
+    poll: Poll
+    page: Page
+    album: Album
     photos_list: typing.List[Photo] = []
-    market: Market = None
-    market_album: MarketAlbum = None
-    sticker: Sticker = None
-    pretty_cards: PrettyCards = None
-    audio_message: AudioMsg = None
+    market: Market
+    market_album: MarketAlbum
+    sticker: Sticker
+    pretty_cards: PrettyCards
+    event: Event

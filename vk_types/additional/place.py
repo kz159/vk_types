@@ -4,28 +4,32 @@ import typing
 
 
 class Place(BaseModel):
-    id: int = None
-    title: str = None
-    latitude: typing.Union[int, float] = None
-    longitude: typing.Union[int, float] = None
-    type: str = None
-    country: int = None
-    city: int = None
-    address: str = None
+    id: int
+    title: str
+    latitude: float
+    longitude: float
+    created: int
+    icon: str
+    checkins: int
+    updated: int
+    type: int
+    country: int
+    city: int
+    address: str
 
 
 class GeoPlace(BaseModel):
-    id: int = None
-    title: str = None
-    latitude: int = None
-    longitude: int = None
-    created: int = None
-    icon: str = None
-    country: str = None
-    city: str = None
-    type: int = None
-    group_id: int = None
-    group_photo: str = None
-    checkins: int = None
-    updated: int = None
-    address: int = None
+    id: int
+    title: str
+    latitude: int
+    longitude: int
+    created: int
+    icon: str
+    country: str
+    city: str
+    type: int
+    group_id: int
+    group_photo: str
+    checkins: int
+    updated: int
+    address: int

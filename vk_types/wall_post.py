@@ -1,40 +1,67 @@
+from typing import Optional, List
+from enum import Enum
+
 from .base import BaseModel
 from .attachments import Like, Repost, Attachments, Geo
 
 from .additional import PostSource
-import typing
 
 # https://vk.com/dev/objects/post
 
 
 class WallPostComments(BaseModel):
-    count: int = None
-    can_post: int = None
-    groups_can_post: int = None
+    count: int
+    can_post: int
+    groups_can_post: int
+    can_close: bool
+    can_open: bool
+
+
+class Copyright(BaseModel):
+    id: int
+    link: str
+    name: str
+    type: str
+
+
+class View(BaseModel):
+    count: int
+
+
+class PostType(Enum):
+    post = 'post'
+    copy = 'copy'
+    reply = 'reply'
+    postpone = 'postpone'
+    suggest = 'suggest'
 
 
 class WallPost(BaseModel):
-    id: int = None
-    owner_id: int = None
-    from_id: int = None
-    created_by: int = None
-    date: int = None
-    text: str = None
-    reply_owner_id: int = None
-    reply_post_id: int = None
-    friends_only: int = None
-    comments: WallPostComments = None
-    likes: Like = None
-    reposts: Repost = None
-    post_type: str = None
-    post_source: PostSource = None
-    attachments: Attachments = None
-    geo: Geo = None
-    signer_id: int = None
-    copy_history: typing.Any = None
-    can_pin: int = None
-    can_delete: int = None
-    can_edit: int = None
-    is_pinned: int = None
-    marked_as_ads: int = None
-    is_favorite: bool = None
+    id: int
+    owner_id: int
+    from_id: int
+    created_by: int
+    date: int
+    text: str
+    reply_owner_id: int
+    reply_post_id: int
+    friends_only: int
+    comments: WallPostComments
+    copyright: Copyright
+    likes: Like
+    reposts: Repost
+    views: View
+    post_type: PostType
+    post_source: PostSource
+    attachments: Attachments
+    geo: Geo
+    signer_id: int
+    copy_history: Optional['WallPost']
+    can_pin: int
+    can_delete: int
+    can_edit: int
+    is_pinned: int
+    marked_as_ads: int
+    is_favorite: bool
+    donut: Donut
+    postponed_id: Optional[int]

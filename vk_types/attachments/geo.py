@@ -1,8 +1,10 @@
+from typing import Optional
+
 from ..base import BaseModel
-from ..additional import GeoPlace
+from ..additional import Place
 
 
 class Geo(BaseModel):
-    type: str = None
-    coordinates: str = None
-    place: GeoPlace = None
+    type: str
+    coordinates: str
+    place: Optional[Place]
