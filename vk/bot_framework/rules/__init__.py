@@ -1,3 +1,0 @@
-"""
-Builtins rules.
-"""
