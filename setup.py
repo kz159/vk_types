@@ -10,7 +10,7 @@ setuptools.setup(
     description="vk_types for vk json answers",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/kz159/vk-types",
+    url="https://github.com/kz159/vk_types",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
