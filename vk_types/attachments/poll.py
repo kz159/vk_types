@@ -1,5 +1,5 @@
 from ..base import BaseModel
-from vk_types import Photo
+from vk_types.attachments import Photo
 from vk_types.additional import PhotoSizes
 
 from typing import List

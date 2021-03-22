@@ -14,3 +14,4 @@ from .country import Country
 from .name_request import NameRequest
 from .metro_station import MetroStation
 from .email import Email
+from .donut import Donut

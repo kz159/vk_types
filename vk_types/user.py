@@ -1,7 +1,7 @@
 from .base import BaseModel
 
 from vk_types.additional import City, Country
-from vk_types import CropPhoto
+from vk_types.attachments import CropPhoto
 from enum import IntEnum
 
 import typing

@@ -1,5 +1,5 @@
 from ..base import BaseModel
-from vk_types import Photo, Like
+from vk_types.attachments import Photo, Like
 
 import typing
 

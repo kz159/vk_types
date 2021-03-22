@@ -2,9 +2,9 @@ from typing import Optional, List
 from enum import Enum
 
 from .base import BaseModel
-from .attachments import Like, Repost, Attachments, Geo
+from .attachments import Like, Repost, Attachment, Geo
 
-from .additional import PostSource
+from .additional import PostSource, Donut
 
 # https://vk.com/dev/objects/post
 
@@ -13,8 +13,8 @@ class WallPostComments(BaseModel):
     count: int
     can_post: int
     groups_can_post: int
-    can_close: bool
-    can_open: bool
+    can_close: Optional[bool]
+    can_open: Optional[bool]
 
 
 class Copyright(BaseModel):
@@ -40,28 +40,28 @@ class WallPost(BaseModel):
     id: int
     owner_id: int
     from_id: int
-    created_by: int
+    created_by: Optional[int]
     date: int
     text: str
-    reply_owner_id: int
-    reply_post_id: int
-    friends_only: int
+    reply_owner_id: Optional[int]
+    reply_post_id: Optional[int]
+    friends_only: Optional[int]
     comments: WallPostComments
-    copyright: Copyright
+    copyright: Optional[Copyright]
     likes: Like
     reposts: Repost
     views: View
     post_type: PostType
     post_source: PostSource
-    attachments: Attachments
-    geo: Geo
-    signer_id: int
+    attachments: List[Attachment]
+    geo: Optional[Geo]
+    signer_id: Optional[int]
     copy_history: Optional['WallPost']
-    can_pin: int
-    can_delete: int
-    can_edit: int
-    is_pinned: int
+    can_pin: Optional[int]
+    can_delete: Optional[int]
+    can_edit: Optional[int]
+    is_pinned: Optional[int]
     marked_as_ads: int
     is_favorite: bool
-    donut: Donut
+    donut: Optional[Donut]
     postponed_id: Optional[int]

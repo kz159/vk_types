@@ -2,7 +2,7 @@ from ..base import BaseModel
 from enum import IntEnum
 
 from vk_types.additional import PhotoSizes
-from vk_types import Graffiti, AudioMsg
+from vk_types.attachments import Graffiti, AudioMsg
 
 # https://vk.com/dev/objects/doc
 

@@ -32,4 +32,4 @@ class PostSource(BaseModel):
     type: Type
     platform: Optional[Platform]
     data: Optional[Data]
-    url: str
+    url: Optional[str]
