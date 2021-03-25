@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class JoinType(Enum):
+class JoinType(str, Enum):
     join = "join"
     unsure = "unsure"
     accepted = "accepted"

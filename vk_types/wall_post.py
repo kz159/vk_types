@@ -12,7 +12,7 @@ from .additional import PostSource, Donut
 class WallPostComments(BaseModel):
     count: int
     can_post: int
-    groups_can_post: int
+    groups_can_post: Optional[int]
     can_close: Optional[bool]
     can_open: Optional[bool]
 
@@ -28,7 +28,7 @@ class View(BaseModel):
     count: int
 
 
-class PostType(Enum):
+class PostType(str, Enum):
     post = 'post'
     copy = 'copy'
     reply = 'reply'
@@ -50,10 +50,10 @@ class WallPost(BaseModel):
     copyright: Optional[Copyright]
     likes: Like
     reposts: Repost
-    views: View
+    views: Optional[View]
     post_type: PostType
     post_source: PostSource
-    attachments: List[Attachment]
+    attachments: Optional[List[Attachment]]
     geo: Optional[Geo]
     signer_id: Optional[int]
     copy_history: Optional['WallPost']
@@ -62,6 +62,7 @@ class WallPost(BaseModel):
     can_edit: Optional[int]
     is_pinned: Optional[int]
     marked_as_ads: int
+
     is_favorite: bool
     donut: Optional[Donut]
     postponed_id: Optional[int]

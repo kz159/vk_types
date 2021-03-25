@@ -23,7 +23,7 @@ from .event import Event
 
 
 class Attachments(str, Enum):
-    not_attachments = []
+    no_attachments = 0
     photo = Photo
     posted_photo = PostedPhoto
     video = Video

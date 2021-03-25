@@ -9,4 +9,4 @@ class BaseModel(pydantic.BaseModel):
         return str(self.dict())
 
     def __repr__(self):
-        return "%s(%r)" % (self.__class__, self.dict())
+        return f"{self.__class__} {getattr(self, 'id', getattr(self, 'type', ''))}"

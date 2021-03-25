@@ -6,7 +6,7 @@ from ..base import BaseModel
 # https://vk.com/dev/objects/post_source
 
 
-class Type(Enum):
+class Type(str, Enum):
     vk = 'vk'
     widget = 'widget'
     api = 'api'
@@ -14,13 +14,13 @@ class Type(Enum):
     sms = 'sms'
 
 
-class Platform(Enum):
+class Platform(str, Enum):
     android = 'android'
     iphone = 'iphone'
     wphone = 'wphone'
 
 
-class Data(Enum):
+class Data(str, Enum):
     profile_activity = 'profile_activity'
     profile_photo = 'profile_photo'
     comments = 'comments'
