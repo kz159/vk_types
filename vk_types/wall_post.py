@@ -46,23 +46,26 @@ class WallPost(BaseModel):
     reply_owner_id: Optional[int]
     reply_post_id: Optional[int]
     friends_only: Optional[int]
-    comments: WallPostComments
+    comments: Optional[WallPostComments]
     copyright: Optional[Copyright]
-    likes: Like
-    reposts: Repost
+    likes: Optional[Like]
+    reposts: Optional[Repost]
     views: Optional[View]
     post_type: PostType
     post_source: PostSource
     attachments: Optional[List[Attachment]]
     geo: Optional[Geo]
     signer_id: Optional[int]
-    copy_history: Optional['WallPost']
+    copy_history: Optional[List['WallPost']]
     can_pin: Optional[int]
     can_delete: Optional[int]
     can_edit: Optional[int]
     is_pinned: Optional[int]
-    marked_as_ads: int
+    marked_as_ads: Optional[int]
 
-    is_favorite: bool
+    is_favorite: Optional[bool]
     donut: Optional[Donut]
     postponed_id: Optional[int]
+
+
+WallPost.update_forward_refs()
