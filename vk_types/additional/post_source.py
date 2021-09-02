@@ -8,6 +8,7 @@ from ..base import BaseModel
 
 class Type(str, Enum):
     vk = 'vk'
+    mvk = 'mvk'
     widget = 'widget'
     api = 'api'
     rss = 'rss'
