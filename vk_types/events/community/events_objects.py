@@ -4,7 +4,7 @@ from vk_types.wall_comment import WallComment
 from vk_types.attachments.topic import TopicComment
 
 from vk_types.additional import JoinType, BlockReason, AdminLevel
-from vk_types import Photo
+from vk_types.attachments import Photo
 
 import typing
 
