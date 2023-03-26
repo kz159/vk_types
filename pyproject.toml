@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "vk-types"
-version = "0.2.5"
+version = "0.2.5.1"
 description = ""
 authors = ["kz159 <loh@kz159.ru>"]
 readme = "README.md"

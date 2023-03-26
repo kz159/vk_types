@@ -1,5 +1,5 @@
 from .base import BaseModel
-from .attachments import Attachments
+from .attachments import Attachment
 
 import typing
 
@@ -22,7 +22,7 @@ class WallComment(BaseModel):
     text: str = None
     reply_to_user: int = None
     reply_to_comment: int = None
-    attachments: list[Attachments] | Attachments = None
+    attachments: list[Attachment] = None
     parents_stack: typing.List[int] = None
     thread: WallCommentThread = None
 

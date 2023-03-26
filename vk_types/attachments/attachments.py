@@ -22,7 +22,7 @@ from .event import Event
 # https://vk.com/dev/objects/attachments_w
 
 
-class Attachments(str, Enum):
+class Attachments(str, Enum):  # Don`t forget to look for Attachment class below
     no_attachments = 0
     photo = Photo
     posted_photo = PostedPhoto
