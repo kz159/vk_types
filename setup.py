@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="vk_types",
-    version="0.2.4",
+    version="0.2.5",
     author="kz159",
     description="vk_types for vk json answers",
     long_description=long_description,

@@ -22,7 +22,7 @@ class WallComment(BaseModel):
     text: str = None
     reply_to_user: int = None
     reply_to_comment: int = None
-    attachments: Attachments = None
+    attachments: list[Attachments] | Attachments = None
     parents_stack: typing.List[int] = None
     thread: WallCommentThread = None
 
